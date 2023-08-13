@@ -1,0 +1,31 @@
+<div class="container-fluid">
+    <header
+        class="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3 mb-4 border-bottom">
+        <div class="col-md-3 mb-2 mb-md-0">
+            <a href="/" class="d-inline-flex link-body-emphasis text-decoration-none">
+                <h1>GhostBurster</h1>
+            </a>
+        </div>
+
+        <ul class="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0">
+            <li><a href="/" class="nav-link px-2 link-secondary">Home</a></li>
+            <li><a href="/ghosts/list" class="nav-link px-2">Ghost</a></li>
+            <li><a href="/ghosts/create" class="nav-link px-2">Ghost create</a></li>
+            <li><a href="/bookings/list" class="nav-link px-2">Booking</a></li>
+           
+        </ul>
+
+        <div class="col-md-3 text-end">
+{{#if user}}
+   
+            <a href="/users/me" class="btn btn-primary me-2">me</a>
+            <a href="/users/logout" class="btn btn-primary">Logout</a>
+            {{else}}
+
+               
+            <a href="/users/login" class="btn btn-outline-primary me-2">Login</a>
+            <a href="/users/register" class="btn btn-primary">Sign-up</a>
+{{/if}}
+        </div>
+    </header>
+</div>

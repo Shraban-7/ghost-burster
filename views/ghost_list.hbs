@@ -1,0 +1,37 @@
+<div class="container mt-5">
+    <h2>Ghost List</h2>
+    <ul class="list-group">
+        {{#each ghosts}}
+        <li class="list-group-item">
+            <div class="row">
+                
+                <div class="col-md-6">
+                    <h4>Car No: {{this.room_no}}</h4>
+                    <p>Description: {{this.des}}</p>
+                    <p>Type:{{this.type}}</p>
+                    <p>Price: {{this.price}}</p>
+                    {{#if this.isAvailable}}
+                    <p>Status:Available </p>
+                    {{else}}
+                    <p>Status:unAvailable </p>
+                    {{/if}}                      
+                </div>
+                <div class="col-md-3">
+                    
+                    
+                        <a href="/ghosts/details/{{this.id}}" class="btn btn-primary mt-3">book now</a>
+                    
+                </div>
+                <div class="col-md-3">
+                    <a href="/ghosts/edit/{{this.id}}" class="btn btn-primary btn-block">Edit</a>
+                    <a  href="/ghosts/delete/{{this.id}}" class="btn btn-danger btn-block">Delete</a>
+                </div>
+            </div>
+        </li>
+    {{/each}}
+       
+    </ul>
+</div>
+
+
+

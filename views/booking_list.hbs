@@ -1,0 +1,27 @@
+<div class="container mt-5">
+    <h2>Booking List</h2>
+    <ul class="list-group">
+        {{#each bookings}}
+        <li class="list-group-item">
+            <div class="row">
+                
+                <div class="col-md-9">
+                    <h4>Ghost Id: {{this.ghostId}}</h4>
+                    <p>User Id: {{this.userId}}</p>
+                    <p>Type:{{this.status}}</p>
+                   
+                                         
+                </div>
+                <div class="col-md-3">
+                    <a href="/bookings/edit/{{this.id}}" class="btn btn-primary btn-block">Edit</a>
+                    <button type="button" class="btn btn-danger btn-block">Delete</button>
+                </div>
+            </div>
+        </li>
+    {{/each}}
+       
+    </ul>
+</div>
+
+
+

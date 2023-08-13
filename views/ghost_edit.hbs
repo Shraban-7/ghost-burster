@@ -1,0 +1,36 @@
+<div class="container mt-5">
+    <h2>Room Details Form</h2>
+    <form action="/ghosts/ghost-store/{{ghost.id}}" method="post">
+        <input type="hidden" name="_csrf" value="{{csrfToken}}">
+        <div class="form-group">
+            <label for="room_no">Room Number:</label>
+            <input type="text" class="form-control" id="room_no" name="room_no" value="{{ghost.room_no}}">
+        </div>
+        <div class="form-group">
+            <label for="des">Description:</label>
+            <textarea class="form-control" id="des" name="des" rows="3" required>{{ghost.des}}</textarea>
+        </div>
+        <div class="form-group">
+            <label for="type">Type:</label>
+            <select class="form-control" id="type" name="type" required>
+                <option value="">Select a type</option>
+                <option selected value="single">Single</option>
+                <option value="double">Double</option>
+                <option value="suite">Suite</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="price">Price:</label>
+            <input type="number" class="form-control" id="price" name="price" value="{{ghost.price}}">
+        </div>
+        <div class="form-group">
+            <label for="type">Status:</label>
+            <select class="form-control" id="type" name="isAvailable">
+                <option value="">Select status</option>
+                <option selected value="1">Available</option>
+                <option value="0">Not Available</option>
+            </select>
+        </div>
+        <button type="submit" class="btn btn-primary mt-3">Submit</button>
+    </form>
+</div>

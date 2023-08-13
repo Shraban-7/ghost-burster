@@ -1,0 +1,15 @@
+<div class="container mt-5">
+    <h2>Book  Now click submit button</h2>
+    <form  action="/bookings/create" method="post">
+        <input type="hidden" name="_csrf" value="{{csrfToken}}">
+      
+
+        
+            <input type="text"  hidden name="userId" value="{{user}}" required>
+       
+      
+            <input type="text" hidden  name="ghostId" value="{{ghost.id}}" required>
+       
+        <button type="submit" class="btn btn-primary mt-3">Submit</button>
+    </form>
+</div>
